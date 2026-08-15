@@ -1,0 +1,94 @@
+# MIND default configuration.
+# Override any key with the MIND_ environment prefix, e.g.:
+#   MIND_LLM__MODEL=qwen3:4b mind discover "Cybersecurity"
+#
+# A custom config file can be provided with: MIND_CONFIG=/path/to/settings.yaml
+
+paths:
+  data_dir: data
+
+search:
+  provider: ddg          # ddg | offline
+  max_results_per_query: 10
+  max_queries: 20
+  timeout_seconds: 20
+  include_colombia: true
+
+queries:
+  base:
+    - "{topic} curriculum"
+    - "{topic} degree curriculum"
+    - "{topic} degree program"
+    - "{topic} syllabus"
+    - "{topic} course syllabus"
+    - "{topic} university courses"
+    - "{topic} course catalog"
+    - "{topic} program requirements"
+    - "{topic} course descriptions"
+    - "{topic} master program"
+  site:
+    - "site:.edu {topic} curriculum"
+    - "site:.edu {topic} syllabus"
+  filetype:
+    - "filetype:pdf {topic} curriculum"
+    - "filetype:pdf {topic} syllabus"
+  colombia:
+    - "{topic} plan de estudios universidad Colombia"
+    - "{topic} pensum universidad Colombia"
+    - "{topic} currículo universidad Colombia"
+    - "pregrado {topic} Colombia"
+    - "maestría {topic} Colombia"
+    - "site:.edu.co {topic}"
+    - "{topic} programa académico universidad Colombia"
+
+download:
+  timeout_seconds: 30
+  connect_timeout_seconds: 10
+  max_size_mb: 50
+  accept_content_types:
+    - application/pdf
+  max_workers: 4
+  user_agent: "MIND/0.1 (automated learning research; local-first)"
+  keep_rejected_files: true
+
+pdf:
+  min_text_chars: 50
+  max_pages: 200
+
+ocr:
+  enabled: true
+  engine: tesseract
+  lang: eng
+  dpi: 200
+
+embeddings:
+  enabled: true
+  runtime: ollama
+  model: nomic-embed-text
+  base_url: http://localhost:11434
+  accept_above: 0.70
+  reject_below: 0.30
+  max_chars: 1000
+  timeout_seconds: 60
+
+llm:
+  runtime: ollama
+  model: llama3.2:3b
+  base_url: http://localhost:11434
+  format: json
+  temperature: 0
+  max_excerpt_chars: 3000
+  max_attempts: 2
+  think: false
+  timeout_seconds: 180
+  decision_confidence_threshold: 0.6
+
+api:
+  host: 127.0.0.1
+  port: 8001
+
+cli:
+  max_discover_sources: 40
+
+project:
+  max_sources: 60

@@ -1,0 +1,40 @@
+{
+  "cybersecurity curriculum": [
+    {
+      "title": "Master of Cybersecurity Curriculum",
+      "url": "https://example.edu/cybersecurity/curriculum.pdf",
+      "snippet": "Official curriculum of the Master of Cybersecurity program."
+    },
+    {
+      "title": "Cybersecurity Degree Requirements",
+      "url": "https://example.edu/cyber/degree-requirements.pdf",
+      "snippet": "Degree requirements and course catalog for cybersecurity."
+    }
+  ],
+  "cafeteria": [
+    {
+      "title": "University Cafeteria Regulations",
+      "url": "https://example.edu/cafeteria/regulations.pdf",
+      "snippet": "Food service hours, meal plans and cafeteria regulations."
+    },
+    {
+      "title": "Campus Dining Guide",
+      "url": "https://example.edu/dining/guide.pdf",
+      "snippet": "A guide to campus dining options."
+    }
+  ],
+  "network security": [
+    {
+      "title": "Network Security Course Syllabus",
+      "url": "https://example.edu/cs/network-security-syllabus.pdf",
+      "snippet": "Syllabus covering firewalls, IDS/IPS, VPNs and labs."
+    }
+  ],
+  "duplicate source": [
+    {
+      "title": "Duplicate Curriculum",
+      "url": "https://example.edu/cybersecurity/curriculum.pdf",
+      "snippet": "Same file as the master curriculum (duplicate URL)."
+    }
+  ]
+}
