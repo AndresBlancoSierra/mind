@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://github.com/AndresBlancoSierra/mind">
+    <img src="https://raw.githubusercontent.com/AndresBlancoSierra/mind/main/profile.svg" alt="MIND — mind@arch">
+  </a>
+</p>
+
 # MIND
 
 Plataforma de **masterización de conocimiento automatizada** (Fase 1: buscar,
